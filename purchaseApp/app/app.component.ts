@@ -2,10 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    templateUrl: 'app/app.component.html',
-    styleUrls: ['app/app.component.css']
+    template: `<child-comp><h2>You are welcome {{name}}!</h2></child-comp>`,
+    styles: [`h2, p{color: #333;}`]
 })
 export class AppComponent {
-    name = "Tom";
-    age = 25;
+    name = "Tom"
 }
