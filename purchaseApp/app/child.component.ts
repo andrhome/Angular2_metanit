@@ -1,17 +1,32 @@
-import { Component } from '@angular/core';
+import { Input, Component } from '@angular/core';
 
 @Component ({
     selector: 'child-comp',
-    template: `<ng-content></ng-content>
-                <p>Hi {{name}}!</p>`,
-    styles: [`h2, p{color: navy;}`]
+    template: `<p>User's name: {{userName}}</p>
+                <p>User's age: {{userAge}}</p>`
 })
 export class ChildComponent {
-    name="Evgeniy"
+    @Input() userName: string;
+    _userAge: number;
+
+    @Input()
+    set userAge(age: number) {
+        if(age < 0)
+            this._userAge = 0;
+        else if(age > 100)
+            this._userAge = 100;
+        else
+            this._userAge = age;
+    }
+
+    get userAge() {return this._userAge;}
 }
 
+
+
+
 // Learn TypeScript
-interface Shape {
+/* interface Shape {
     name: string;
     printArea: () => void;
 }
@@ -55,5 +70,5 @@ shapes[1] = new Circle(30);
 for (let i = 0; i < shapes.length; i++) {
     let currentShape = shapes[i];
     currentShape.printArea();
-}
+} */
 
