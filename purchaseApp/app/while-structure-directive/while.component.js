@@ -6,16 +6,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var WhileComponent = (function () {
+    function WhileComponent() {
+        this.condition = true;
     }
-    return AppComponent;
+    WhileComponent.prototype.toggle = function () {
+        this.condition = !this.condition;
+    };
+    return WhileComponent;
 }());
-AppComponent = __decorate([
+WhileComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        template: "<bold-directive></bold-directive>\n                <hr>\n                <ng-if-for></ng-if-for>\n                <hr>\n                <while-structure-directive></while-structure-directive>\n                <hr>\n                <phone-comp></phone-comp>"
+        selector: 'while-structure-directive',
+        templateUrl: 'app/while-structure-directive/while-template.html'
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], WhileComponent);
+exports.WhileComponent = WhileComponent;
+//# sourceMappingURL=while.component.js.map

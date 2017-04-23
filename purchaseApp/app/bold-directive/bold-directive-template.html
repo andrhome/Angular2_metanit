@@ -1,0 +1,10 @@
+<div bold [defaultSize]="size1">
+    <h2>Получение параметров в директивах</h2>
+    <p>Angular 2 представляет модульную архитектуру приложения</p>
+    <p>Angular 2 представляет модульную архитектуру</p>
+    <p>Angular 2 представляет модульную</p>
+    <p>Angular 2 представляет</p>
+    <p>Size: {{size1}}</p>
+    <input type="text" [(ngModel)]="val">
+    <button type="button" (click)="changeSize(val)">Change size</button>
+</div>

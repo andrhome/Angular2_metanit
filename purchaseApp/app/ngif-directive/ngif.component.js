@@ -6,16 +6,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var NgIf = (function () {
+    function NgIf() {
+        // NgIf directive
+        this.condition = true;
+        // NgFor directive
+        this.items = ["Apple iPhone 7", "Huawei Mate 9", "Samsung Galaxy S7", "Motorola Moto Z"];
+        // NgSwitch directive
+        this.count = 5;
     }
-    return AppComponent;
+    NgIf.prototype.toggle = function () {
+        this.condition = !this.condition;
+    };
+    return NgIf;
 }());
-AppComponent = __decorate([
+NgIf = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        template: "<bold-directive></bold-directive>\n                <hr>\n                <ng-if-for></ng-if-for>\n                <hr>\n                <while-structure-directive></while-structure-directive>\n                <hr>\n                <phone-comp></phone-comp>"
+        selector: 'ng-if-for',
+        templateUrl: 'app/ngif-directive/ng-if-for.html'
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], NgIf);
+exports.NgIf = NgIf;
+//# sourceMappingURL=ngif.component.js.map
