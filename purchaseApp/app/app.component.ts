@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: `<child-comp [userName]="name" [userAge]="age"></child-comp>
-                <input type="text" [(ngModel)]="age">`
+    template: `<bold-directive></bold-directive>
+                <hr>
+                <ng-if-for></ng-if-for>
+                <hr>
+                <while-structure-directive></while-structure-directive>
+                <hr>
+                <phone-comp></phone-comp>`
 })
-export class AppComponent {
-    name: string = "Tom";
-    age: number = 25;
-}
+export class AppComponent {}

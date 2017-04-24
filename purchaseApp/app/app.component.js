@@ -8,15 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
-        this.name = "Tom";
-        this.age = 25;
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "<child-comp [userName]=\"name\" [userAge]=\"age\"></child-comp>\n                <input type=\"text\" [(ngModel)]=\"age\">"
+        template: "<bold-directive></bold-directive>\n                <hr>\n                <ng-if-for></ng-if-for>\n                <hr>\n                <while-structure-directive></while-structure-directive>\n                <hr>\n                <phone-comp></phone-comp>"
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
