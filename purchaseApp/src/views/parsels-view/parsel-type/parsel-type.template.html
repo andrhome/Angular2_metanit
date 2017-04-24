@@ -1,0 +1,25 @@
+<div class="ibox float-e-margins" *ngIf="!createConditions">
+    <div class="ibox-title">
+        <div class="ibox-tools">
+            <button type="button" class="btn btn-primary" (click)="createParselType()">Create a Parcel Type</button>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let parsel of parsels; let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{parsel.name}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<create-parsel *ngIf="createConditions"></create-parsel>
+
